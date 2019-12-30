@@ -27,6 +27,8 @@ jobs:
       run: ./gradlew test
 
     - name: Report code coverage
+      env:
+          cctoken: ${{ secrets.cctoken }}
       run: |
         ./gradlew jacocoTestReport
-        bash <(curl -s https://codecov.io/bash)
+        bash <(curl -s https://codecov.io/bash) -t cctoken
