@@ -28,7 +28,8 @@ jobs:
 
     - name: Report code coverage
       env:
-          cctoken: ${{ secrets.cctoken }}
+          CODECOV_TOKEN: ${{ secrets.cctoken }}
       run: |
+        echo $CODECOV_TOKEN
         ./gradlew jacocoTestReport
-        bash <(curl -s https://codecov.io/bash) -t cctoken
+        bash <(curl -s https://codecov.io/bash)
