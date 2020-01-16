@@ -6,7 +6,7 @@ on:
     branches:
       - master
   pull_request:
-    branches: 
+    branches:
       - master
 
 jobs:
@@ -26,10 +26,5 @@ jobs:
     - name: Run tests
       run: ./gradlew test
 
-    - name: Report code coverage
-      env:
-          CODECOV_TOKEN: ${{ secrets.cctoken }}
-      run: |
-        echo $CODECOV_TOKEN
-        ./gradlew jacocoTestReport
-        bash <(curl -s https://codecov.io/bash)
+    # TODO: Add Codecov (make sure to set up on codecov.io as well) 
+    #       for test coverage reports

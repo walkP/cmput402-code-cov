@@ -1,6 +1,6 @@
 plugins {
     id 'com.github.johnrengelman.shadow' version '4.0.2'
-    id 'jacoco'
+    // TODO: Add jococo plugin
 }
 
 group 'com.example.helloworld'
@@ -36,15 +36,8 @@ run {
     args = ['server', 'hello-world.yml']
 }
 
-jacoco {
-    toolVersion = "0.8.5"
-}
-
-jacocoTestReport {
-    reports {
-        xml.enabled true
-    }
-}
+// TODO: Set jacoco version to be 0.8.5
+// TODO: Enable jacoco test report in xml format
 
 shadowJar {
     mergeServiceFiles()
