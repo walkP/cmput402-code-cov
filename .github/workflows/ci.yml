@@ -28,7 +28,7 @@ jobs:
 
     # TODO: Add Codecov (make sure to set up on codecov.io as well) 
     #       for test coverage reports
-    -name: Run CodeCov Report
+    - name: Run CodeCov Report
     env:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     run: |
