@@ -33,4 +33,4 @@ jobs:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     run: |
       ./gradlew jacocoTestReport
-      bash <(curl -s https://ccodecov.io/bash)
+      bash <(curl -s https://codecov.io/bash)
